@@ -99,17 +99,10 @@ nav a{
     height: 475px;
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: 64px; */
-    background-color: aquamarine;
-    
    
-   
-
 }
 
-.banner-text{
 
-}
 
 #banner-title{
     font-size: 3.25rem;
@@ -140,38 +133,46 @@ nav a{
 
 }
 
-.banner-img{
-  
-    
- 
-    border: 2px solid white;
-    margin-right: 20px;
-    position: relative;
-    display: none;
-    
-    
-    
+.banner-img {
+    position: relative; /* Container for absolute positioning */
+    width: 380px;  /* Match your bg image size */
+    height: 380px; /* Match your bg image size */
+    flex-shrink: 0;
 }
 
+.bg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+}
 
-
-.bg-img img{
+.bg-img img {
     height: 380px;
     width: 380px;
-    position: absolute;
-    z-index: 2;
-    top: 5px;
-    object-fit: cover; 
+    object-fit: contain;
+}
+
+.bg {
+    z-index: 1;
     
 }
 
-.front-img img{
-   
-     max-width: 351px;
-     height: 331px;
-     object-fit: contain;
-     z-index: 1;
-     
+.front-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it */
+    z-index: 2;
+}
+
+.front {
+    object-fit: contain;
+}
+
+.front-img img {
+    max-width: 351px;
+    height: 331px;
 }
 
 /* vendor logo styles */
@@ -199,9 +200,6 @@ hr{
 
 /* card styles */
 
-#popular-collection{
-   
-}
 
 .card-section{  
     max-width: 65%;
@@ -383,7 +381,7 @@ hr{
 
 
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
     .nav-bar{
     
@@ -441,18 +439,29 @@ hr{
     row-gap: 20px;
     margin-left: auto;
     margin-right: auto;
+    align-content: center;
     
 }
 
 .feature-container{
     max-width: 80%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
    
 }
 
 .feature-container img{
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+.feature-container h1{
+    margin-top: 0px;
+
+}
+
+#footer{
     max-width: 100%;
 }
 
