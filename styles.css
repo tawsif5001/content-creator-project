@@ -380,7 +380,19 @@ hr{
 }
 
 
+@media only screen and (max-width:915px) {
 
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    .feature-container{
+      flex-wrap: wrap;
+        
+    }
+    
+}
 
 
 
@@ -439,6 +451,14 @@ hr{
     .banner-text {
         text-align: center;
         margin-bottom: 30px; /* Space between text and image */
+    }
+
+    .banner-img{
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+       
     }
 
     
@@ -503,12 +523,10 @@ hr{
 }
 
 
-   
-    
-
-
     
 }
+
+
 
 
 
